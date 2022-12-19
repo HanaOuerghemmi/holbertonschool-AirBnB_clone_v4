@@ -19,7 +19,7 @@ def close_db(error):
 
 
 @app.route('/1-hbnb/')
-def hbnb():
+def hbnb(cache_id=None):
     """ HBNB is alive! """
     states = storage.all(State).values()
     states = sorted(states, key=lambda k: k.name)
@@ -32,12 +32,12 @@ def hbnb():
     amenities = sorted(amenities, key=lambda k: k.name)
 
     places = storage.all(Place).values()
-    places = sorted(places, key=lambda k: k.name)
-
+    places = sorted(places, key=lambda k: k.name)s
+    cache_id =(str(uuid.uuid4()))
     return render_template('0-hbnb.html',
                            states=st_ct,
                            amenities=amenities,
-                           places=places)
+                           places=places, cache_id=cache_id)
 
 
 if __name__ == "__main__":
