@@ -7,3 +7,9 @@ header {
     background-position: 20px center;
     flex-shrink: 0;
 }
+.api_status{
+    border-radius: 50%;
+    background-color: black;
+
+
+}
