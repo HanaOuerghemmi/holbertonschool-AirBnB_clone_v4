@@ -6,10 +6,20 @@ header {
     background-repeat: no-repeat;
     background-position: 20px center;
     flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+
 }
 .api_status{
-    border-radius: 50%;
-    background-color: black;
+        margin-top: 15px;
+        margin-right: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #cccccc;
+        align-items: center;
+}
 
-
+.available{
+background-color: #ff545f;
 }
